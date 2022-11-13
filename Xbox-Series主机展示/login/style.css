@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont,'Microsoft Yahei','Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(res/bg.png) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 922px;
+    height: 600px;
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.4);
+    display: inline-flex;
+}
+
+/* #region 左区 */
+
+.textarea{
+    width: 53%;
+    height: 100%;
+    padding: 40px 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    height: 20px;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo img{
+    height: 100%;
+}
+.logo .splitline{
+    width: 2px;
+    height: 90%;
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #808080;
+}
+
+/* 表单区 */
+.items{
+    width: 100%;
+    overflow: hidden;
+}
+.items .item-group{
+    width: 350%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.items form{
+    width: 100%;
+    margin-right: 5%;
+}
+
+.items h1{
+    margin: 50px 0 30px;
+}
+.items .inputControl{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #707070;
+    background-color: transparent;
+    font-size: 1.1em;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.items .inputControl:focus{
+    border-color: dimgrey;
+    box-shadow: 0 3px 6px -3px grey;
+}
+
+/* 按钮区 */
+
+    .items .btns{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .items .btn_sec{
+        display: block;
+        margin-bottom: 0.5em;
+        text-decoration: none;
+        color: #0094d3;
+    }
+
+    .items .btn_pmy{
+        margin: 0 5px;
+        padding: 10px 35px;
+        display: block;
+        background-color: #0067B8;
+        outline: none;
+        border: none;
+        border-radius: 0%;
+        color: whitesmoke;
+        font-size: 1em;
+        cursor: pointer;
+        -webkit-border-radius: 0%;
+        -moz-border-radius: 0%;
+        -ms-border-radius: 0%;
+        -o-border-radius: 0%;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+}
+
+.items .btn_sec:hover{
+    text-decoration: underline;
+    color: #005DA6;
+}
+
+.items .btn_pmy:hover{
+        filter: brightness(0.9);
+        -webkit-filter: brightness(0.9);
+}
+
+
+
+/* #endregion */
+
+/* #region 右区 */
+
+.banner{
+    width: 47%;
+    height: 100%;
+    background: url(res/halo.png) center no-repeat;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+
+/* #endregion */
+
+/*#region 响应式 */
+@media (max-width:922px){
+    .content{
+        width: 100%;
+        height: 100vh;
+    }
+}
+@media (max-height:600px){
+    .content{
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media (max-width:600px)
+{
+    .content{
+        width: 100%;
+        height: 100vh;
+    }
+    .textarea{
+        width: 100%;
+    }
+    .banner{
+        display: none;
+    }
+}
+
+
+
+/* #endregion  */

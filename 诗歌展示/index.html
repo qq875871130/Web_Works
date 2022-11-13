@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV's Work - Season Poetry</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://api.cvlocke.site/lib/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://api.cvlocke.site/lib/jquery/easing/jquery.easing.min.js" type="text/JavaScript"></script>
+    <script src="https://api.cvlocke.site/lib/jquery/slimscroll/jquery.slimscroll.min.js"
+        type="text/JavaScript"></script>
+    <link rel="stylesheet" href="https://api.cvlocke.site/lib/fullpage/2.7.8/fullpage.css">
+    <script src="https://api.cvlocke.site/lib/fullpage/2.7.8/fullpage.js"></script>
+    <!-- 控制台信息 -->
+    <script>
+        var style = [
+            'color: #222;',
+            'font-size: 1.2em;',
+            'line-height: 2em;',
+            'background-color:#DADADA;',
+            'font-family:Gilroy-Light;',
+            'font-weight:Bolder;',
+        ].join(' ');
+        var stylecv = [
+            'color: whitesmoke;',
+            'font-size: 1em;',
+            'line-height: 2em;',
+            'background-color:#008080;'
+        ].join(' ');
+        console.log("%cCreated by CVLocke '陈炜龙'\n%cCopyright ©2020-2022 CVLocke All Rights Reserved", style, stylecv);
+    </script>
+
+</head>
+
+<body>
+
+    <!-- 导航栏 -->
+    <div class="navarea">
+        <ul>
+            <li data-menuanchor="spring" id="btn-spring"><a href="#spring"></a></li>
+            <li data-menuanchor="summer" id="btn-summer"><a href="#summer"></a></li>
+            <li data-menuanchor="auttum" id="btn-auttum"><a href="#auttum"></a></li>
+            <li data-menuanchor="winter" id="btn-winter"><a href="#winter"></a></li>
+        </ul>
+    </div>
+
+    <!-- 诗歌区域 -->
+    <div class="poemarea">
+        <div class="content">
+            <span>
+                <h1>钱塘湖春行</h1>
+                <h2>唐&emsp;白居易</h2>
+                <p>孤山寺北贾亭西，水面初平云脚低。</p>
+                <p>几处早莺争暖树，谁家新燕啄春泥。</p>
+                <p>乱花渐欲迷人眼，浅草才能没马蹄。</p>
+                <p>最爱湖东行不足，绿杨阴里白沙堤。</p>
+            </span>
+        </div>
+    </div>
+    <!-- 全屏页面 -->
+    <div id="fullpage">
+        <div class="section">
+            <div class="bg spring">
+            </div>
+
+        </div>
+
+        <div class="section">
+            <div class="bg summer">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="bg auttum">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="bg winter">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 动画控制脚本 -->
+    <script>
+        $(document).ready(
+            function () {
+                $('#fullpage').fullpage(
+                    {
+                        menu: '.navarea ul',
+                        anchors: ['spring', 'summer', 'auttum', 'winter'],
+                        navigation: false,          //是否显示导航，默认为false
+                        easing: 'easeInOutCubic',
+                        controlArrows: false,
+                        navigationPosition: 'right',            //导航小圆点的位置
+                        resize: true,
+                        fixedElements: '.navarea,.poemarea',
+                        afterLoad: function (anchorLink, index) {
+                            onLoaded(anchorLink);
+                        },
+                        onLeave: function (index, nextindex, direction) {
+                            onLeave(index, nextindex, direction);
+                        }
+                    }
+                )
+            }
+        );
+        var poemArea = $('.poemarea');
+        // 设置淡入效果
+        function onLoaded(anchorLink) {
+            if (anchorLink == 'spring') {
+                changePoem('qiantanghu');
+            }
+            if (anchorLink == 'summer') {
+                changePoem('youjuchuxia');
+            }
+            if (anchorLink == 'auttum') {
+                changePoem('yujiaao');
+            }
+            if (anchorLink == 'winter') {
+                changePoem('xuehou');
+            }
+            poemArea.find('h1').animate({ opacity: 1 }), poemArea.find('h1').css('top', '0');
+            poemArea.find('h2').delay(800).animate({ opacity: 1 });
+            poemArea.find('p').delay(1800).animate({ opacity: 1 });
+        }
+
+        // 设置淡出效果
+        function onLeave(index, nextindex, direction) {
+            if (nextindex == 1) {
+                poemArea.css('background-color', 'rgba(206, 206, 189, 0.938)');
+            }
+            if (nextindex == 2) {
+                poemArea.css('background-color', 'rgba(18, 48, 50, 0.952)');
+            }
+            if (nextindex == 3) {
+                poemArea.css('background-color', 'rgba(208, 239, 188, 0.9)');
+            }
+            if (nextindex == 4) {
+                poemArea.css('background-color', 'rgba(230, 235, 240, 0.8)');
+            }
+            poemArea.find('h1').css('opacity', '0'), poemArea.find('h1').css('top', '-5%');
+            poemArea.find('h2').css('opacity', '0');
+            poemArea.find('p').css('opacity', '0');
+
+        }
+
+        //更改诗歌文本效果
+        function changePoem(title) {
+            if (title == 'qiantanghu') {
+                poemArea.find('span').html("<h1>钱塘湖春行</h1><h2>唐&emsp;白居易</h2><p>孤山寺北贾亭西，水面初平云脚低。</p><p>几处早莺争暖树，谁家新燕啄春泥。</p><p>乱花渐欲迷人眼，浅草才能没马蹄。</p><p>最爱湖东行不足，绿杨阴里白沙堤。</p>");
+                poemArea.find('span').css('color', '#000');
+            }
+            if (title == 'youjuchuxia') {
+                poemArea.find('span').html("<h1>幽居初夏</h1><h2>宋&emsp;陆游</h2><p>湖山胜处放翁家，槐柳阴中野径斜。</p><p>水满有时观下鹭，草深无处不鸣蛙。</p><p>箨龙已过头番笋，木笔犹开第一花。</p><p>叹息老来交旧尽，睡来谁共午瓯茶。</p>");
+                poemArea.find('span').css('color', '#DFE2AB');
+            }
+            if (title == 'yujiaao') {
+                poemArea.find('span').html("<h1>渔家傲·秋思</h1><h2>宋&emsp;范仲淹</h2><p>塞下秋来风景异，衡阳雁去无留意。</p><p>四面边声连角起，千嶂里，长烟落日孤城闭。</p><p>浊酒一杯家万里，燕然未勒归无计。</p><p>羌管悠悠霜满地，人不寐，将军白发征夫泪。</p>");
+                poemArea.find('span').css('color', '#000');
+            }
+            if (title == 'xuehou') {
+                poemArea.find('span').html("<h1>山中雪后</h1><h2>清&emsp;郑燮</h2><p>晨起开门雪满山，</p><p>雪晴云淡日光寒。</p><p>檐流未滴梅花冻，</p><p>一种清孤不等闲。</p>");
+                poemArea.find('span').css('color', '#000');
+            }
+        }
+    </script>
+</body>
+
+
+</html>

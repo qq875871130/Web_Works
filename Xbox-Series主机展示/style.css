@@ -1,0 +1,665 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*#region 全局类 */
+img{
+    user-select: none;
+    vertical-align: middle;
+}
+.bg{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 圆框按钮类 */
+.btn{
+    display: inline-block;
+    padding: .5em 1.2em;
+    letter-spacing: .06em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    user-select: none;
+    color: #1E1E1E;
+    background-color: transparent;
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    border-color:  #202020;
+    border-radius: 2em;
+    transition: background 0.2s,color 0.2s,border 0.2s;
+    -webkit-transition: background 0.2s,color 0.2s,border 0.2s;
+    -moz-transition: background 0.2s,color 0.2s,border 0.2s;
+    -ms-transition: background 0.2s,color 0.2s,border 0.2s;
+    -o-transition: background 0.2s,color 0.2s,border 0.2s;
+}
+
+.btn:hover{
+    background-color: #1E1E1E;
+    color: #E6E6E6;
+}
+
+/* 方角按钮类 */
+.btn-sec{
+    padding: 0.3em 1.5em;
+    color: #111;
+    background-color: transparent;
+    font-size: 1.1em;
+    text-decoration: none;
+    border:none;
+    outline: none;
+    user-select: none;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+
+}
+.btn-sec::after{
+    content: "";
+    display: inline-block;
+    margin: 0 0 .255rem .4rem;
+    width: 10px;
+    height: 16px;
+    vertical-align: middle;
+    background: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/icons/btn_next.svg) no-repeat center;
+    background-size: cover;
+}
+
+.btn-sec span{
+    padding: .2em 0 ;
+    border:0 solid transparent;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.btn-sec:hover span{
+    border-bottom-width: 3px;
+    border-bottom-color:#111 ;
+}
+
+.btn-yellow{
+background-color: #A6FF10;
+font-size: 1em;
+}
+.btn-yellow::after{
+margin: 0 0 .255rem .1rem;
+}
+
+.btn-yellow:hover{
+    filter: brightness(0.8);
+    -webkit-filter: brightness(0.8);
+}
+
+.btn-yellow span{
+    padding: 0;
+}
+
+.container-fullpage{
+    width: 100%;
+    height: 100vh;
+}
+.split-line{
+    font-weight: bold;
+    color: #5E5E5E;
+    margin: 0 1em;
+}
+
+.split-line-hr{
+    width: 4em;
+}
+
+.no-select{
+    user-select: none;
+}
+.obj-relative{
+    position: relative;
+}
+.obj-show{
+    display: block;
+}
+.obj-hide{
+    display: none;
+}
+.title{
+    user-select: none;
+}
+.section-2 .title,
+.section-3 .title{
+    font-size: 4.2em;
+    line-height:110%;
+    font-weight:800;
+}
+
+/* 介绍卡 */
+.introduction{
+    padding: 0 25%;
+    text-align: center;
+}
+
+.introduction .title{
+    margin: 0.1em 0;
+}
+.introduction .subtitle{
+    font-size: 3.8em;
+    font-family: -apple-system,BlinkMacSystemFont,microsoft yahei,'Yahei';
+    letter-spacing: 0.08em;
+}
+.introduction .description{
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+
+/* #endregion */
+
+/* #region 第一屏 */
+
+
+/* #region 导航栏 */
+.section-1 nav{
+    width: 100%;
+    height: 6%;
+    padding:15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.section-1 .nav-left{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.section-1 .nav-left .navlist,.section-1 .nav-right ul{
+    margin: 0 2em !important;
+    padding: 0 !important;
+    display: inline-flex;
+}
+
+.section-1 .nav-left .navlist li{
+    position: relative;
+}
+
+/* 子菜单样式 */
+.section-1 .nav-left .navlist #sublist{
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    top:  100%;
+    left: 0;
+    min-width: 100%;
+    background-color: white;
+    border: 1px solid lightgray;
+    pointer-events: none;
+    border-radius: .366em;
+    -webkit-border-radius: .366em;
+    -moz-border-radius: .366em;
+    -ms-border-radius: .366em;
+    -o-border-radius: .366em;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.section-1 .nav-left .navlist #sublist p{
+    padding: 1.2em 1em;
+    user-select: none;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: #545454;
+}
+.section-1 .nav-left .navlist #sublist a{
+    display: block;
+    padding: 1.4em 2em 1.4em 1.4em;
+    white-space: nowrap;
+}
+
+.section-1 .nav-left .navlist .active #sublist{
+    opacity: 1;
+    top: 120%;
+    pointer-events: all;
+}
+
+/* 左区主列表按钮样式 */
+.section-1 .nav-left .navlist a,.section-1 .nav-left .navlist #mainBtn{
+    padding:0.5em 1em;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #545454;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition:all 0.2s ;
+    -webkit-transition:all 0.2s ;
+    -moz-transition:all 0.2s ;
+    -ms-transition:all 0.2s ;
+    -o-transition:all 0.2s ;
+}
+
+.section-1 .nav-left .navlist a:hover,.section-1 .nav-left .navlist #mainBtn:hover{
+    background-color: gainsboro;
+}
+
+/* 三角伪元素 */
+.section-1 .navlist #mainBtn::after{
+    display: inline-block;
+    margin-left: .255rem;
+    vertical-align: .255rem;
+    content: '';
+    border-top: .3em solid;
+    border-left:.3em solid transparent;
+    border-right: .3em solid transparent;
+    border-bottom: none;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.section-1 .navlist .active #mainBtn::after{
+    transform-origin: center;
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+}
+
+
+/* 右区导航 */
+.section-1 .nav-right ul a{
+    margin: 0 1em;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #545454;
+    display: block;
+}
+
+.section-1 .nav-right a:hover{
+    font-weight: bolder;
+}
+
+.section-1 .nav-right a img{
+    transform: translateY(-8%);
+    height: 1.8em;
+    margin-left: 0.5em;
+}
+/* #endregion */
+
+
+/* #region 内容区 */
+.section-1 .content{
+    width: 100%;
+    height: 94%;
+}
+
+/*#region 左区 */
+.section-1 .content-left{
+    width: 27.8%;
+    height: 100%;
+    float: left;
+    background: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/images/s1-bg-lg.svg) center no-repeat;
+    background-size:  auto 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 .content-left .content-container{
+    transform: scale(1.3,1.3);
+    padding-bottom: 18%;
+}
+
+.section-1 .content-left .logo{
+    margin: 1em;
+}
+.section-1 .content-left .title{
+    font-size: 3.3em;
+    font-weight: normal;
+    font-family: microsoft yahei,'Yahei',-apple-system, BlinkMacSystemFont,'Segoe UI';
+    color: #0C630C;
+}
+
+.section-1 .content-left .subtitle{
+    margin: 10% 0 15%;
+    font-size: 1.6em;
+    font-weight: lighter;
+}
+.section-1 .content-left .btn-play{
+    padding: 0.5em 0.7em;
+    font-size: 0.9em;
+    color: #0E580E;
+    border-color:  #0D530D;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.section-1 .content-left .btn-play::before{
+    margin-left: .3em;
+    display: inline-block;
+    content: '';
+    vertical-align: -0.02em;
+    border-top: .45em solid transparent;
+    border-left:.6em solid ;
+    border-right: none;
+    border-bottom: .45em solid transparent;
+}
+
+.section-1 .content-left .btn-play:hover{
+    background-color: #107C10;
+    color: seashell;
+    border-color: transparent;
+}
+
+/* #endregion */
+
+/*#region 右区 */
+.section-1 .content-right{
+    width: 72.2%;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: flex-end;
+}
+.section-1 .banner{
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+}
+.section-1 .content-right .text-area{
+    width: 100%;
+    padding: 0 7vw 0.5em;
+    background-color: #E6E6E6;
+    display: inline-flex;
+}
+.section-1 .content-right span{
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    padding: 0 7%;
+    overflow: hidden;
+}
+
+.section-1 .content-right a{
+    text-decoration: none;
+    color: #116511;
+    font-size: 2em;
+    font-weight: bolder;
+    border-bottom: 0px solid transparent;
+    transition: all 0.2s;
+    letter-spacing:0.03em;
+}
+
+.section-1 .content-right a:hover{
+    border-bottom: 5px solid #0f570f;
+}
+
+
+
+.section-1 .content-right p{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+/* #endregion */
+
+/* #endregion */
+
+
+
+/* #endregion */
+
+/* #region 第二屏 */
+.section-2 .container-fullpage{
+    padding: 60px 35px;
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/images/s2_bg.jpg);
+}
+.section-2 .content{
+    box-sizing: content-box;
+    height: fit-content;
+    width: 27%;
+}
+.section-2 .introArea{
+    margin: 10vh 0 ;
+}
+.section-2 .introArea li{
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 2vw;
+}
+.section-2 .introArea .intro-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-2 .introArea .intro-text{
+    flex: 2;
+}
+.section-2 .introArea .intro-text h3{
+    margin-bottom: 0.5em;
+}
+.section-2 .introArea .intro-text p{
+    font-weight: lighter;
+    font-size: 0.96em;
+}
+/* #endregion */
+
+/*#region 第三屏 */
+
+.section-3 .container-fullpage{
+    padding: 0 10%;
+    display: flex;
+    align-items: flex-end;
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/images/s3_bg.jpg);
+}
+
+.section-3 .content{
+    width: 100%;
+}
+.section-3 .introduction .logo{
+    width: 190px;
+    margin: 1em 0;
+}
+
+.section-3 .introArea{
+    margin:3.5vw 0;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.section-3 .introArea li{
+    display: flex;
+    flex-direction: column;
+    margin: 0 4vw;
+}
+.section-3 .introArea .intro-icon{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-3 .introArea .intro-icon img{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.section-3 .introArea .intro-text{
+    margin: .3em 0;
+    flex: 1;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+/* #endregion */
+
+/* #region 第四屏 */
+.section-4 .container-fullpage{
+    background-color: #191919;
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/images/s4_bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FCFCFC;
+}
+.section-4 .content{
+    transform: translateY(18%);
+    -webkit-transform: translateY(18%);
+    -moz-transform: translateY(18%);
+    -ms-transform: translateY(18%);
+    -o-transform: translateY(18%);
+}
+.section-4 .introduction{
+    padding: 0 10%;
+}
+.section-4 .introduction .subtitle{
+    margin: 15px;
+    font-size: 46px;
+    font-weight: normal;
+}
+.section-4 .introduction .description{
+    margin-bottom: 30px;
+    letter-spacing: .03em;
+    color: #FCFCFC;
+}
+
+/* #endregion */
+
+/* #region 第五屏 */
+
+
+.section-5 .container-fullpage{
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/images/s5_bg.jpg);
+    background-color: #E6E6E6;
+    background-size: auto 100%;
+    background-position: 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.section-5 .container-fullpage .content{
+    padding: 0 10%;
+    transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+    -moz-transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -o-transform: translateY(-25%);
+}
+
+.section-5 .introduction{
+    padding: 0;
+}
+.section-5 .introduction .subtitle{
+    font-size: 2.7em;
+}
+.section-5 .introduction .description{
+    margin: 36px 0 45px;
+    font-size: 1.4em;
+    letter-spacing: .1em;
+}
+
+/* #endregion */
+
+/* #region 页脚 Footer */
+footer{
+    padding: 4vw 10vw 2vw;
+    width: 100%;
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/Xbox-Series%E4%B8%BB%E6%9C%BA%E5%B1%95%E7%A4%BA/icons/footer_bg.svg);
+    background-position: 0 0 !important;
+}
+footer a{
+    text-decoration: none;
+    outline: none;
+}
+footer .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #111;
+}
+footer .content-left .split-line{
+    padding: 0 2em;
+    display: inline-block;
+    transform: scale(1.8,1.8);
+    -webkit-transform: scale(1.8,1.8);
+    -moz-transform: scale(1.8,1.8);
+    -ms-transform: scale(1.8,1.8);
+    -o-transform: scale(1.8,1.8);
+}
+footer .content-left .logo{
+    margin-bottom: 2em;
+}
+footer .content-left .copyright p{
+    font-size: .9em;
+    font-weight: lighter;
+    letter-spacing: .02em;
+}
+
+/* 链接列表 */
+footer .content-right .linkArea{
+    display: inline-flex;
+}
+footer .content-right .link-item{
+    margin: 0 3.4vw;
+}
+footer .content-right .link-title{
+    margin-bottom: .5em;
+    font-size: 17px;
+    font-weight: 600;
+}
+footer .content-right .link-list li{
+    margin: .3em 0;
+}
+
+footer .content .content-right .link-list a,
+footer .content-left .copyright a
+{
+    font-size: 15px;
+    font-weight: lighter;
+    text-decoration: none;
+    letter-spacing: .04em;
+    color: #111;
+    border: 0px solid transparent;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+footer .content .content-right .link-list a:hover,
+footer .content-left .copyright a:hover
+{
+    border-bottom-width: 2px;
+    border-bottom-color: #666;
+}
+
+
+/* #endregion */
+
+/* 设置Fullpage样式 */
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span{
+    box-sizing: content-box !important;
+    border: 2px solid rgba(255,255,255,.5)  !important;
+    background-color: rgba(0, 0, 0,.6) !important;
+}
+

@@ -1,0 +1,141 @@
+@font-face
+{
+    font-family: founderqing;
+    src: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/fonts/%E6%96%B9%E6%AD%A3%E6%B8%85%E5%88%BB%E6%9C%AC%E6%82%A6%E5%AE%8B%E7%AE%80%E4%BD%93.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'founderqing',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* #region 导航栏设置 */
+.navarea{
+    position: fixed;
+    right: 2vw;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navarea li{
+    list-style: none;
+}
+
+.navarea li a{
+    width: 6vw;
+    height: 4vw;
+    text-decoration: none;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1vw;
+    border-width: 0px;
+    border-style: solid;
+    filter:brightness(50%);
+    -webkit-filter: brightness(50%);
+    transition:all 0.3s;
+
+}
+.navarea #btn-spring a{
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/qiantang.jpg);
+    border-color: rgb(219, 215, 196);
+}
+.navarea #btn-summer a{
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/summer.jpg);
+    border-color: rgb(109, 92, 120);
+}
+.navarea #btn-auttum a{
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/auttum.jpg);
+    border-color: rgb(226, 222, 197);
+}
+.navarea #btn-winter a{
+    background-image: url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/winter.jpg);
+    border-color: rgb(200, 200, 255);
+}
+
+.navarea li a:hover,.navarea .active a{
+    transform: scale(1.2,1.2);
+    filter:brightness(100%);
+    -webkit-filter: brightness(100%);
+    border-width: 0.3vw;
+}
+/* #endregion */
+
+/* #region 全屏页面设置 */
+.section{
+    width: 100vw;
+    height: 100vh;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 春天背景图 */
+.spring{
+    background-image: linear-gradient(rgba(42, 50, 9, 0.1),rgba(42, 50, 9,0.3)),url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/qiantang.jpg)
+}
+/* 夏天背景图 */
+.summer{
+    background-image: linear-gradient(rgba(19, 29, 36, 0.521),rgba(24, 33, 39, 0.699)),url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/summer.jpg)
+}
+/* 秋天背景图 */
+.auttum{
+    background-image: linear-gradient(rgba(0, 146, 78, 0.253),rgba(0, 179, 104, 0.253)),url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/auttum.jpg)
+}
+/* 冬天背景图 */
+.winter{
+    background-image: linear-gradient(rgba(0, 92, 87, 0.185),rgba(0, 69, 90, 0.096)),url(https://cloud.cvlocke.site/%E4%BD%9C%E5%93%81%E9%9B%86/H5%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/%E8%AF%97%E6%AD%8C%E5%B1%95%E7%A4%BA/images/winter.jpg)
+}
+/* #endregion */
+
+/* #region 诗歌区域 */
+.poemarea{
+    position: fixed;
+    left: 15vw;
+    top: 25vh;
+    padding: 5vh 2vw;
+    background-color: rgba(206, 206, 189, 0.938);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.poemarea .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    user-select: none;
+}
+.poemarea .content span{
+    color: #000;
+}
+.poemarea .content h1{
+    position: relative;
+    top:-5%;
+    margin: 1em 0;
+    font-size: 3em;
+    opacity: 0;
+    transition: all 1s;
+}
+.poemarea .content h2{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.poemarea .content p{
+    font-family: fangsong;
+    margin: 1em 0;
+    font-size: 1.8em;
+    font-weight: bolder;
+    opacity: 0;
+    transition: all 1s;
+}
+/* #endregion */

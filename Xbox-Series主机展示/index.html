@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Your Dream | Xbox Series</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- 导入字体库 -->
+    <link rel="stylesheet" href="https://api.cvlocke.site/lib/cvlib/font/font.css" type="text/css">
+    <link rel="stylesheet" href="./style.css">
+
+
+    <!-- JQuery -->
+    <script src="https://api.cvlocke.site/lib/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Fullpage -->
+    <script src="https://api.cvlocke.site/lib/fullpage/3.0.5/scrolloverflow.min.js" type="text/JavaScript"></script>
+    <link href="./lib/fullpage/fullpage.css" rel="stylesheet">
+    <script src="./lib/fullpage/fullpage.js"></script>
+    <script src="https://api.cvlocke.site/lib/fullpage/3.0.5/easing.min.js" type="text/JavaScript"></script>
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://api.cvlocke.site/lib/fancybox/3.5.7/jquery.fancybox.min.css" type="text/css">
+    <script src="https://api.cvlocke.site/lib/fancybox/3.5.7/jquery.fancybox.min.js" type="text/JavaScript"></script>
+    <!-- 控制台信息 -->
+    <script>
+        var style = [
+            'color: #222;',
+            'font-size: 1.2em;',
+            'line-height: 2em;',
+            'background-color:#DADADA;',
+            'font-family:Gilroy-Light;',
+            'font-weight:Bolder;',
+        ].join(' ');
+        var stylecv = [
+            'color: whitesmoke;',
+            'font-size: 1em;',
+            'line-height: 2em;',
+            'background-color:#008080;'
+        ].join(' ');
+        console.log("%cCreated by CVLocke '陈炜龙'\n%cCopyright ©2020-2022 CVLocke All Rights Reserved", style, stylecv);
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- 第一屏 -->
+        <div class="section section-1">
+            <div class="container-fullpage">
+                <nav>
+                    <div class="nav-left">
+                        <a href="https://www.microsoft.com/"><img src="./icons/logo-microsoft-sm.svg"
+                                alt="microsoft"></a>
+                        <span class="split-line">|</span>
+                        <a href="https://www.xbox.com/zh-HK/?xr=mebarnav"><img src="./icons/logo-xbox-text.svg"
+                                alt="xbox"></a>
+                        <ul class="navlist">
+                            <li>
+                                <button id="mainBtn" role="button">Xbox Game Pass</button>
+                                <ul id="sublist">
+                                    <li><a href="https://www.xbox.com/zh-HK/xbox-game-pass?xr=shellnav">概观</a></li>
+                                    <li><a href="https://www.xbox.com/zh-hk/xbox-game-pass/games?xr=shellnav">浏览游戏</a>
+                                    </li>
+                                    <li><a href="https://www.xbox.com/zh-HK/xbox-game-pass/pc-games?xr=shellnav">Xbox
+                                            Game Pass for PC</a></li>
+                                    <li><a href="https://www.xbox.com/zh-hk/live/gold?xr=shellnav">Xbox Live Gold</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button id="mainBtn" role="button">游戏</button>
+                                <ul id="sublist">
+                                    <li><a href="https://www.xbox.com/zh-HK/games/all-games?xr=shellnav">选购所有主机游戏</a>
+                                    </li>
+                                    <li><a href="https://www.xbox.com/zh-HK/pc-gaming?xr=shellnav">使用Xbox的电脑游戏</a></li>
+                                    <li><a href="https://www.xbox.com/games?xr=shellnav">所有游戏展示</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button id="mainBtn" role="button">设备</button>
+                                <ul id="sublist">
+                                    <li>
+                                        <p>所有Xbox主机</p>
+                                    </li>
+                                    <li><a href="https://www.xbox.com/zh-HK/consoles/xbox-series-x?xr=shellnav">全新 Xbox
+                                            Series X</a></li>
+                                    <li><a href="https://www.xbox.com/zh-HK/consoles/xbox-series-s?xr=shellnav">全新 Xbox
+                                            Series S</a></li>
+                                    <hr>
+                                    <li>
+                                        <p>所有Xbox配件</p>
+                                    </li>
+                                    <li><a href="https://www.xbox.com/zh-HK/accessories?xr=shellnav#controllers">控制器</a>
+                                    </li>
+                                    <li><a href="https://www.xbox.com/zh-HK/accessories?xr=shellnav#headsets">头戴式设备</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.xbox.com/zh-HK/accessories?xr=shellnav#harddrives">硬盘与存储空间</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button id="mainBtn" role="button">社群</button>
+                                <ul id="sublist">
+                                    <li><a href="https://www.xbox.com/zh-HK/community?xr=shellnav">Xbox Community</a>
+                                    </li>
+                                    <li><a href="https://www.xbox.com/zh-HK/live/gold?xr=shellnav">多人游戏</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button id="mainBtn" role="button">支持</button>
+                                <ul id="sublist">
+                                    <li><a href="https://support.xbox.com/zh-HK/">支持首页</a></li>
+                                    <li><a href="https://support.xbox.com/zh-HK/xbox-live-status">Xbox Live 状态</a></li>
+                                    <li><a href="https://support.xbox.com/zh-HK/help/accessible-gaming">无障碍游戏</a></li>
+                                    <li><a
+                                            href="https://support.xbox.com/zh-HK/help/whats-new-xbox-support">支持服务的新功能</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-right">
+                        <ul>
+                            <li><a href="#">搜寻<img src="./icons/icons8_search_50px_2.svg" alt=""></a></li>
+                            <li><a href="login/index.html">登入<img src="./icons/icons8_login_50px_2.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="content-left">
+                        <div class="content-container obj-relative" data-anime anime-fade="0,1,1500"
+                            anime-top="-10%,0,1500">
+                            <div class="logo">
+                                <img src="./icons/logo-xbox.svg" alt="xbox">
+                                <img src="./icons/s1_xs.svg" alt="xbox series">
+                            </div>
+                            <h1 class="title">XBOX SERIES</h1>
+                            <img class="split-line-hr" src="./images/s1_squre.svg" alt="squre">
+                            <h3 class="subtitle obj-relative" data-anime data-anime-delay=1500 anime-fade="0,1,1000">
+                                千方百计实现变好的梦想
+                            </h3>
+                            <button class="btn btn-play obj-relative" data-fancybox href="videos/PowerYourDream.mp4"
+                                class="btn btn-play" data-anime data-anime-delay=2000 anime-fade="0,1,1000">
+                                播放影片
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-right obj-relative" data-anime anime-fade="0,1,1500" anime-top="20%,0,1500">
+                        <div>
+                            <img class="banner" src="./images/s1_banner.jpg" alt="xbox series">
+                            <div class="text-area">
+                                <span>
+                                    <a href="https://www.xbox.com/zh-hk/consoles/xbox-series-x">
+                                        XBOX SERIES X
+                                    </a>
+                                    <p>有史以来最快、最强大的 Xbox</p>
+                                </span>
+                                <span>
+                                    <a href="https://www.xbox.com/zh-HK/consoles/xbox-series-s">
+                                        XBOX SERIES S
+                                    </a>
+                                    <p>有史以来外形最小的 Xbox 所带来的新一代效能</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 第二屏 -->
+        <div class="section section-2">
+            <div class="container-fullpage bg obj-relative" data-anime anime-left="5%,0,1000" anime-fade="0,1,1500">
+                <div class="content">
+                    <h1 class="title obj-relative" data-anime anime-left="-20%,0,1500" anime-fade="0,1,1500">POWER
+                        YOUR
+                        DREAMS</h1>
+                    <ul class="introArea">
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="800"
+                                anime-left="-2%,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s2_velocity.svg" width="45%">
+                            </div>
+                            <div class="intro-text">
+                                <h3 class="obj-relative" data-anime data-anime-delay="1200" anime-left="-1em,0,1000"
+                                    anime-fade="0,1,1500">Xbox 重力架构</h3>
+                                <p class="obj-relative" data-anime data-anime-delay="1600" anime-top="-10%,0,1000"
+                                    anime-fade="0,1,800">
+                                    透过由自订SSD和整合式软件支持的Xbox重力架构 ，体验新一代速度和效能</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="800"
+                                anime-left="-2%,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s2_lib.svg" width="55%">
+                            </div>
+                            <div class="intro-text">
+                                <h3 class="obj-relative" data-anime data-anime-delay="1200" anime-left="-1em,0,1000"
+                                    anime-fade="0,1,1500">庞大游戏库</h3>
+                                <p class="obj-relative" data-anime data-anime-delay="1600" anime-top="-10%,0,1000"
+                                    anime-fade="0,1,800">
+                                    透过向下相容功能，游玩数千款横跨四个Xbox世代的游戏，包括上市当天游玩性能强化游戏</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="800"
+                                anime-left="-2%,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s2_xgp.svg" width="65%">
+                            </div>
+                            <div class="intro-text">
+                                <h3 class="obj-relative" data-anime data-anime-delay="1200" anime-left="-1em,0,1000"
+                                    anime-fade="0,1,1500">Xbox Game Pass</h3>
+                                <p class="obj-relative" data-anime data-anime-delay="1600" anime-top="-10%,0,1000"
+                                    anime-fade="0,1,800">
+                                    透过Xbox Game Pass。无限游玩超过100款高品质游戏，其中包括在上市游玩Halo lnfinite等全新的Xbox Game Studio游戏
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="800"
+                                anime-left="-2%,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s3_smart.svg" width="60%">
+                            </div>
+                            <div class="intro-text">
+                                <h3 class="obj-relative" data-anime data-anime-delay="1200" anime-left="-1em,0,1000"
+                                    anime-fade="0,1,1500">智慧分发</h3>
+                                <p class="obj-relative" data-anime data-anime-delay="1600" anime-top="-10%,0,1000"
+                                    anime-fade="0,1,800">
+                                    透过智慧分发，无论你在哪台设备上游玩，都能享受最棒的游戏版本</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三屏 -->
+        <div class="section section-3">
+            <div class="container-fullpage bg obj-relative" data-anime anime-top="-5%,0,1000" anime-fade="0,1,1500">
+                <div class="content">
+                    <div class="introduction">
+                        <div class="obj-relative" data-anime anime-top="-10%,0,1200" anime-fade="0,1,1500">
+                            <img class="logo" src="./icons/s3_xs.svg">
+                            <h1 class="title">XBOX SERIES X|S</h1>
+                            <h1 class="subtitle">性能强化</h1>
+                        </div>
+                        <p class="description obj-relative" data-anime data-anime-delay="600" anime-top="-1em,0,1000"
+                            anime-fade="0,1,1500">
+                            使用Xbox Series X|S
+                            开发套件构建的游戏展示了无与伦比的载入时间、视觉效果、响应速度、以及高达120 FPS的画面速率</p>
+                        <a href="https://www.xbox.com/games/optimized" class="btn-sec obj-relative" data-anime
+                            data-anime-delay="2800" anime-left=".6em,0,800" anime-fade="0,1,1000">
+                            <span>深入了解</span>
+                        </a>
+                    </div>
+                    <ul class="introArea">
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="800"
+                                anime-top="1em,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s3_smart.svg">
+                            </div>
+                            <div class="intro-text obj-relative" data-anime data-anime-delay="1300"
+                                anime-top=".5em,0,1000" anime-fade="0,1,1000">
+                                <p>智慧分发</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="1100"
+                                anime-top="1em,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s3_4k.svg">
+                            </div>
+                            <div class="intro-text obj-relative" data-anime data-anime-delay="1600"
+                                anime-top=".5em,0,1000" anime-fade="0,1,1000">
+                                <p>4k Ultra HD</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="1400"
+                                anime-top="1em,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s3_hdr.svg">
+                            </div>
+                            <div class="intro-text obj-relative" data-anime data-anime-delay="1900"
+                                anime-top=".5em,0,1000" anime-fade="0,1,1000">
+                                <p>高动态范围</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="1700"
+                                anime-top="1em,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s3_120fps.svg">
+                            </div>
+                            <div class="intro-text obj-relative" data-anime data-anime-delay="2200"
+                                anime-top=".5em,0,1000" anime-fade="0,1,1000">
+                                <p>高达 120FPS</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="intro-icon obj-relative" data-anime data-anime-delay="2000"
+                                anime-top="1em,0,1000" anime-fade="0,1,1200">
+                                <img src="./icons/s3_tracing.svg">
+                            </div>
+                            <div class="intro-text obj-relative" data-anime data-anime-delay="2500"
+                                anime-top=".5em,0,1000" anime-fade="0,1,1000">
+                                <p>光线追踪算法</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第四屏 -->
+        <div class="section section-4">
+            <div class="container-fullpage bg" data-anime anime-fade="0,1,1500">
+                <div class="content">
+                    <div class="introduction">
+                        <svg class="logo obj-relative" data-anime data-anime-delay="200" anime-top="-30%,0,1000"
+                            anime-fade="0,1,1500" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" style="fill: aliceblue; width:210px;height:auto;"
+                            width="101.673" height="49.56" viewBox="0 0 101.673 49.56">
+                            <defs>
+                                <style>
+                                    .a {
+                                        clip-path: url(#a);
+                                    }
+                                </style>
+                                <clipPath id="a">
+                                    <rect width="101.673" height="49.56" />
+                                </clipPath>
+                            </defs>
+                            <g class="a">
+                                <g class="a">
+                                    <path
+                                        d="M50.75,12.5a.1.1,0,0,1,.052.026C55.46,16.07,63.443,24.84,61.01,27.317a15.587,15.587,0,0,1-20.52,0C38.057,24.84,46.04,16.07,50.7,12.528a.062.062,0,0,1,.052-.026M58.862,2.277a15.606,15.606,0,0,0-16.234,0,.059.059,0,0,0-.026.078c.009.026.043.035.078.026,3.022-.649,7.6,1.957,8.035,2.217.009.009.017.009.035.009s.026-.009.035-.009c.433-.26,5.022-2.866,8.035-2.217a.066.066,0,0,0,.078-.026.064.064,0,0,0-.035-.078M39.84,4.468a.48.48,0,0,0-.069.052,15.595,15.595,0,0,0-1.42,20.511.067.067,0,0,0,.087.026.066.066,0,0,0,.017-.078C37.26,21.3,43.338,12.39,46.472,8.658a.066.066,0,0,0,.017-.043.062.062,0,0,0-.026-.052C41.71,3.836,40.1,4.338,39.84,4.468m15.186,4.1A.052.052,0,0,0,55,8.615a.066.066,0,0,0,.017.043C58.152,12.39,64.23,21.3,63.044,24.97a.066.066,0,0,0,.017.078c.026.017.061,0,.087-.026a15.583,15.583,0,0,0-1.42-20.5.208.208,0,0,0-.069-.052c-.268-.13-1.879-.632-6.632,4.1M20.9,36.027H18.61L13.441,49.265h2.1l1.281-3.429h5.87l1.281,3.429h2.1ZM17.468,44.07l2.286-6.061,2.286,6.061Zm-5.082-1.784v6.979h-1.9V47.534a4.793,4.793,0,0,1-1.8,1.515,5.706,5.706,0,0,1-2.494.519,6.705,6.705,0,0,1-2.571-.476,5.483,5.483,0,0,1-1.983-1.437,6.326,6.326,0,0,1-1.3-2.2,8.616,8.616,0,0,1-.433-2.8,8.7,8.7,0,0,1,.433-2.823A6.1,6.1,0,0,1,1.64,37.646a5.488,5.488,0,0,1,2.026-1.42A6.977,6.977,0,0,1,6.29,35.75a6.329,6.329,0,0,1,4.035,1.264,5.228,5.228,0,0,1,1.9,3.4v.026H10.143v-.017a3.4,3.4,0,0,0-1.316-2.1,4.147,4.147,0,0,0-2.52-.771,3.9,3.9,0,0,0-3.134,1.385A5.526,5.526,0,0,0,2,42.668,5.571,5.571,0,0,0,3.173,46.4,4.013,4.013,0,0,0,6.35,47.785a4.187,4.187,0,0,0,2.9-1.074,3.639,3.639,0,0,0,1.238-2.675h-3.9V42.313h5.792Zm32.373-4.442v3.836h6.58v1.688h-6.58v4.078H52.2v1.818H42.741V36.027H52.2v1.818Zm-4.043-1.818V49.265H38.767V38.754c-.251.736-.589,1.654-1,2.727l-2.987,7.784h-1.7l-.009-.009L30.048,41.49c-.364-.961-.693-1.862-.978-2.684V49.265H27.121V36.027H29.9l2.71,7.039c.545,1.429,1,2.658,1.333,3.671.4-1.2.857-2.5,1.351-3.853l2.615-6.849h2.805Zm25.516,1.126a4.722,4.722,0,0,0-3.351-1.126H57.243V49.265h2.026V44.391h3.61a4.722,4.722,0,0,0,3.351-1.126,4.022,4.022,0,0,0,1.195-3.048,4.067,4.067,0,0,0-1.195-3.065m-6.97.658h3.576a2.59,2.59,0,0,1,1.879.623,2.391,2.391,0,0,1,.641,1.784,2.357,2.357,0,0,1-.641,1.775,2.625,2.625,0,0,1-1.879.615H59.261Zm30.546,7.784A3.506,3.506,0,0,1,88.439,48.5a6.084,6.084,0,0,1-3.784,1.056,6.271,6.271,0,0,1-4.078-1.195A4.286,4.286,0,0,1,79.1,44.884v-.017h2.026v.017a2.779,2.779,0,0,0,.918,2.208,4.14,4.14,0,0,0,2.658.736,3.828,3.828,0,0,0,2.242-.563,1.88,1.88,0,0,0,.779-1.628,1.54,1.54,0,0,0-.641-1.325,6.622,6.622,0,0,0-2.329-.84l-1.134-.242a6.373,6.373,0,0,1-3.082-1.342,3.277,3.277,0,0,1-1.048-2.571,3.159,3.159,0,0,1,1.264-2.623,5.478,5.478,0,0,1,3.42-.978,5.911,5.911,0,0,1,3.914,1.117,3.941,3.941,0,0,1,1.351,3.074v.017h-2v-.017a2.526,2.526,0,0,0-.84-1.87,3.869,3.869,0,0,0-2.407-.6,3.478,3.478,0,0,0-1.974.476,1.567,1.567,0,0,0-.675,1.359,1.591,1.591,0,0,0,.606,1.359,5.7,5.7,0,0,0,2.251.849l1.152.242a7.064,7.064,0,0,1,3.264,1.394,3.21,3.21,0,0,1,1,2.476m11.775,0a3.506,3.506,0,0,1-1.368,2.909A6.084,6.084,0,0,1,96.43,49.56a6.271,6.271,0,0,1-4.078-1.195,4.286,4.286,0,0,1-1.481-3.481v-.017H92.9v.017a2.779,2.779,0,0,0,.918,2.208,4.14,4.14,0,0,0,2.658.736,3.828,3.828,0,0,0,2.242-.563,1.88,1.88,0,0,0,.779-1.628,1.54,1.54,0,0,0-.641-1.325,6.622,6.622,0,0,0-2.329-.84l-1.134-.242a6.373,6.373,0,0,1-3.082-1.342,3.277,3.277,0,0,1-1.048-2.571,3.159,3.159,0,0,1,1.264-2.623,5.478,5.478,0,0,1,3.42-.978,5.911,5.911,0,0,1,3.914,1.117,3.941,3.941,0,0,1,1.351,3.074v.017h-2v-.017a2.526,2.526,0,0,0-.84-1.87,3.869,3.869,0,0,0-2.407-.6,3.478,3.478,0,0,0-1.974.476,1.567,1.567,0,0,0-.675,1.359,1.591,1.591,0,0,0,.606,1.359,5.7,5.7,0,0,0,2.251.849l1.152.242a7.064,7.064,0,0,1,3.264,1.394,3.21,3.21,0,0,1,1,2.476M73.469,36.027H71.183L66.014,49.265h2.1l1.281-3.429h5.87l1.273,3.429h2.1ZM70.031,44.07l2.286-6.061L74.6,44.07Z"
+                                        transform="translate(0.091)" />
+                                </g>
+                            </g>
+                        </svg>
+                        <h1 class="subtitle obj-relative" data-anime data-anime-delay="600" anime-top="-0.355em,0,1000"
+                            anime-fade="0,1,1500">探索下一个喜爱的游戏</h1>
+                        <p class="description obj-relative" data-anime data-anime-delay="1100" anime-top="-0.8em,0,1000"
+                            anime-fade="0,1,1500">可以在主机、电脑和相容的移动设备上游玩超过100款高品质游戏，并获得Xbox Live
+                            Gold和EA Play的所有好处</p>
+                        <a href="https://www.xbox.com/xbox-game-pass" class="btn-sec btn-yellow" data-anime
+                            data-anime-delay="2000" anime-fade="0,1,1500">
+                            <span>深入了解</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第五屏 | Footer-->
+        <div class="section section-5">
+            <div class="container-fullpage bg obj-relative" data-anime anime-left="-5%,0,1000" anime-fade="0,1,1500">
+                <div class="content">
+                    <div class="introduction">
+                        <span class="subtitle obj-relative" data-anime data-anime-delay="300" anime-left="1em,0,1800"
+                            anime-fade="0,1,1500">更多玩乐，更少等待</span>
+                        <p class="description obj-relative" data-anime data-anime-delay="1500" anime-top="-0.5em,0,1000"
+                            anime-fade="0,1,1500">精简的主界面设计可让你快速进入你喜爱的游戏和娱乐</p>
+                        <a href="https://www.xbox.com/consoles/experience" class="btn" data-anime
+                            data-anime-delay="2500" anime-fade="0,1,1500">
+                            深入了解
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bg">
+                <div class="content">
+                    <div class="content-left obj-relative" data-anime anime-left="-5%,0,1000" anime-fade="0,1,1500">
+                        <div class="logo">
+                            <a href="https://www.microsoft.com/">
+                                <img src="./icons/logo-microsoft-sm.svg" alt="Microsoft" height="32px">
+                            </a>
+                            <span class="split-line">|</span>
+                            <a href="https://www.xbox.com/zh-HK/?xr=mebarnav">
+                                <img src="./icons/logo-xbox-text.svg" alt="Xbox" height="36px">
+                            </a>
+                        </div>
+                        <div class="copyright">
+                            <p>版权所有&copy; <a href="https://www.microsoft.com/">微软</a> | <a
+                                    href="https://www.xbox.com/zh-HK/?xr=mebarnav">XBOX</a> 保留所有权利，由CVLocke团队重构</p>
+                            <p>Copyright&copy; 2020 Microsoft & Xbox All Rights Reserved
+                                <br>
+                                Reconsitution by CVLocke's Team
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content-right obj-relative" data-anime data-anime-delay="300" anime-left="1em,0,1800"
+                        anime-fade="0,1,1500">
+                        <ul class="linkArea">
+                            <li class="link-item">
+                                <p class="link-title">浏览</p>
+                                <ul class="link-list">
+                                    <li><a href="https://www.xbox.com/zh-HK/consoles?xr=footnav">Xbox 主机</a></li>
+                                    <li><a href="https://www.xbox.com/zh-HK/games?xr=footnav">Xbox 游戏</a></li>
+                                    <li><a href="https://www.xbox.com/zh-HK/xbox-game-pass?xr=footnav">Xbox Game
+                                            Pass</a></li>
+                                    <li><a href="https://www.xbox.com/zh-HK/accessories?xr=footnav">Xbox 配件</a></li>
+                                </ul>
+                            </li>
+                            <li class="link-item">
+                                <p class="link-title">支援</p>
+                                <ul class="link-list">
+                                    <li><a href="https://support.xbox.com/?xr=footnav">Xbox 支援服务</a></li>
+                                    <li><a href="https://aka.ms/xboxideas?xr=footnav">意见反馈</a></li>
+                                    <li><a
+                                            href="https://www.xbox.com/zh-HK/legal/community-standards?xr=footnav">社区准则</a>
+                                    </li>
+                                    <li><a
+                                            href="https://support.xbox.com/help/family-online-safety/online-safety/photosensitive-seizure-warning?xr=footnav">光敏性癫痫警告</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="link-item">
+                                <p class="link-title">Microsoft 商店</p>
+                                <ul class="link-list">
+                                    <li><a href="https://account.microsoft.com/?xr=footnav">Microsoft 账户</a></li>
+                                    <li><a
+                                            href="https://go.microsoft.com/fwlink/p/?LinkID=824761&clcid=0x409?xr=footnav">Microsoft
+                                            Store 支援</a></li>
+                                    <li><a
+                                            href="https://go.microsoft.com/fwlink/p/?LinkID=824764&clcid=0x409?xr=footnav">退款</a>
+                                    </li>
+                                    <li><a href="https://account.microsoft.com/orders?xr=footnav">订单状态</a></li>
+                                </ul>
+                            </li>
+                            <li class="link-item">
+                                <p class="link-title">开发人员专用</p>
+                                <ul class="link-list">
+                                    <li><a href="https://www.xbox.com/zh-HK/developers?xr=footnav">游戏</a></li>
+                                    <li><a href="https://www.xbox.com/zh-HK/developers/id?xr=footnav">ID@Xbox</a></li>
+                                    <li><a href="https://dev.windows.com/games?xr=footnav">Windows 10</a></li>
+                                    <li><a
+                                            href="https://www.xbox.com/zh-HK/developers/creators-program?xr=footnav">制作者计划</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- 自定交互 -->
+    <script>
+        window.onload = function () {
+            const mainBtn = document.querySelectorAll('.navlist #mainBtn');
+
+            //绑定点击事件
+            for (let i = 0; i < mainBtn.length; i++) {
+                const btn = mainBtn[i];
+                btn.onclick = function () {
+                    activeToggler(i);
+                }
+            }
+
+            //active类切换器
+            function activeToggler(index) {
+                for (let j = 0; j < mainBtn.length; j++) {
+                    const activeList = mainBtn[j].parentElement;
+                    if (j != index) {
+                        activeList.classList.remove('active');      //移除索引外的active
+                    }
+                }
+                mainBtn[index].parentElement.classList.toggle('active');
+            }
+        }
+    </script>
+    <!-- 初始化Fullpage -->
+    <script>
+        $(document).ready(
+            function () {
+                //设置动画初位
+                $('[data-anime]').each(
+                    function () {
+                        onAnime($(this), 'init');
+                        $('.section-1  [data-anime]').each(
+                            function () {
+                                //立即执行无delay属性的动画队列
+                                if (!$(this)[0].hasAttribute('data-anime-delay')) {
+                                    onAnime($(this), 'load');
+                                }
+                                else {
+                                    //按属性值延迟执行队列
+                                    let timer = setTimeout(() => {
+                                        onAnime($(this), 'load');
+                                        clearTimeout(timer);
+                                    }, $(this).attr('data-anime-delay'));
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+                // Fullpage
+                $('.main').fullpage({
+                    anchors: ['section-1', 'section-2', 'section-3', 'section-4', 'section-5'],
+                    sectionsColor: ['white', 'white', '#E1E1E1', '#191919', '#E6E6E6'],
+                    navigation: true,
+                    navigationPosition: 'right',
+                    css3: false,
+                    easing: 'easeInQuart',
+                    scrollOverflow: true,
+                    onLeave: function (originSection, targetSection, direction) {
+                        onLeaved(originSection, targetSection, direction);
+                    },
+                }
+                );
+            }
+
+        )
+
+        //定义动画列表键值对
+        function animateData(ele) {
+            var Data = {
+                opacity: ele[0].hasAttribute('anime-fade') ? ele.attr('anime-fade').split(',') : {},
+                top: ele[0].hasAttribute('anime-top') ? ele.attr('anime-top').split(',') : {},
+                left: ele[0].hasAttribute('anime-left') ? ele.attr('anime-left').split(',') : {},
+            }
+            return Data;
+        }
+
+        //动画设置函数
+        function onAnime(ele, type, outSpeed = 500) {
+            let animeList = animateData(ele);
+            //遍历动画列表键值对
+            $.each(animeList, function (animeKey, animeVal) {
+                let cssSetter = {};
+                switch (type) {
+                    case 'init':
+                        cssSetter[animeKey] = animeVal[0];
+                        ele.css(cssSetter);
+                        break;
+                    case 'load':
+                        cssSetter[animeKey] = animeVal[1];
+                        ele.animate(cssSetter, { queue: false, duration: parseInt(animeVal[2]) });
+                        break;
+                    case 'leave':
+                        cssSetter[animeKey] = animeVal[0];
+                        ele.animate(cssSetter, { queue: false, duration: outSpeed });
+                        break;
+                    default:
+                        break;
+                }
+            })
+        }
+
+        // 回调函数
+        function onLeaved(originSection, targetSection, direction) {
+            $('.' + originSection.anchor + '  [data-anime]').each(
+                function () {
+                    onAnime($(this), 'leave', 500);
+                }
+            );
+            $('.' + targetSection.anchor + '  [data-anime]').each(
+                function () {
+                    //立即执行无delay属性的动画队列
+                    if (!$(this)[0].hasAttribute('data-anime-delay')) {
+                        onAnime($(this), 'load');
+                    }
+                    else {
+                        //按属性值延迟执行队列
+                        let timer = setTimeout(() => {
+                            onAnime($(this), 'load');
+                            clearTimeout(timer);
+                        }, $(this).attr('data-anime-delay'));
+                    }
+
+                }
+            );
+
+        }
+    </script>
+
+</body>
+
+</html>

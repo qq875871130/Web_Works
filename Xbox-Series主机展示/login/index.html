@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft | Login & Sign up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="textarea">
+                <div style="width: 100%;">
+                    <div class="logo">
+                        <a href="https://www.microsoft.com/" target="_blank">
+                            <img src="../icons/logo-microsoft-sm.svg" alt="Microsoft">
+                        </a>
+                        <div class="splitline"></div>
+                        <a href="https://www.xbox.com/" target="_blank">
+                            <img src="../icons/logo-xbox-text.svg" alt="Xbox">
+                        </a>
+                    </div>
+                    <div class="items">
+                        <div class="item-group">
+                            <form action="#" method="post" id="REGIST">
+                                <h1>注册</h1>
+                                <input type="text" name="Username" id="USER" placeholder="用户名" class="inputControl"
+                                    maxlength="15" minlength="6" pattern="^[A-Za-z][A-Za-z0-9]+$" required="required"
+                                    oninput="invalid(this,'用户名格式有误：请输入包含字母或数字的英文名称（6-15个字符）')">
+                                <input type="password" name="Password" id="PASS" placeholder="密码" class="inputControl"
+                                    minlength="12" maxlength="50" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]+$"
+                                    required="required" oninput="invalid(this,'密码格式有误：至少包含一个大写和小写字母的数字组合（至少12位）')">
+                                <input type="password" name="Repeat" id="REPEAT" placeholder="确认密码" class="inputControl"
+                                    required="required"
+                                    oninput="checker(this, document.querySelector('#REGIST #PASS'), '密码不一致') ">
+                                <input type="email" name="Email" id="EMAIL" placeholder="电子邮件" class="inputControl"
+                                    required="required">
+                                <div class="btns">
+                                    <a href="#LOGIN" class="btn_sec">我已注册</a>
+                                    <ul style="display: inline-flex;">
+                                        <li><input type="submit" value="确认" class="btn_pmy" id="SUBMIT">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <form action="#" method="post" id="LOGIN">
+                                <h1>登录</h1>
+                                <input type="text" name="Username" id="USER" placeholder="用户名" class="inputControl"
+                                    maxlength="15" minlength="6" required="required">
+                                <input type="password" name="Password" id="PASS" placeholder="密码" class="inputControl"
+                                    minlength="12" maxlength="50" required="required">
+                                <div class="btns">
+                                    <span>
+                                        <a href="#REGIST" class="btn_sec">创建账户</a>
+                                        <a href="#FIND" class="btn_sec">忘记密码</a>
+                                    </span>
+                                    <ul style="display: inline-flex;">
+                                        <li><input type="submit" value="登录" class="btn_pmy" id="SUBMIT">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <form action="#" method="post" id="FIND">
+                                <h1>找回密码</h1>
+                                <input type="email" name="Email" id="EMAIL" placeholder="电子邮件" class="inputControl"
+                                    required="required">
+                                <input type="email" name="confirmEmail" id="REEMAIL" placeholder="确认电子邮件"
+                                    class="inputControl" required="required" autocomplete="none"
+                                    oninput="checker(this,document.querySelector('#FIND #EMAIL'),'邮件不一致')">
+                                <input type="text" name="Validnum" id="VALID" placeholder="验证码" class="inputControl"
+                                    minlength="5" required="required" pattern="^[A-Z0-9]+$" autocomplete="none"
+                                    oninput="invalid(this,'验证码格式错误：大写字母或数字组合')">
+                                <div class="btns">
+                                    <span>
+                                        <a href="#LOGIN" class="btn_sec">返回登录</a>
+                                        <a href="#REGIST" class="btn_sec">返回注册</a>
+                                    </span>
+                                    <ul style="display: inline-flex;">
+                                        <li><input type="submit" value="重置" class="btn_pmy" id="SUBMIT">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="banner"></div>
+        </div>
+    </div>
+    <script>
+        // 表单验证提示
+        function invalid(obj, text) {
+            obj.validity.patternMismatch ? obj.setCustomValidity(text) : obj.setCustomValidity('');
+        }
+        function checker(origin, target, text) {
+            origin.value != target.value ? origin.setCustomValidity(text) : origin.setCustomValidity('');
+        }
+
+
+    </script>
+</body>
+
+</html>
